@@ -19,7 +19,6 @@ class RateMyProf:
         return json
 
     def get_data(self):
-        print 'Getting Data...'
         data = self.crawlURL(self.url)
         io = StringIO(data)
         json_data = json.load(io)
@@ -30,10 +29,3 @@ class RateMyProf:
         self.helpful = json_data['response']['docs'][0]['averagehelpfulscore_rf']
         self.clarity = json_data['response']['docs'][0]['averageclarityscore_rf']
         self.easy = json_data['response']['docs'][0]['averageeasyscore_rf']
-
-        print self.name
-        print self.last_name
-        print self.average_rating
-        print self.helpful
-        print self.clarity
-        print self.easy
