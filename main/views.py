@@ -69,8 +69,9 @@ def course_details(request):
     """
     if request.method == 'GET':
         cid = request.GET['course_id']
+        crn = request.GET['course_crn']
 
-        c = Course.objects.get(id=cid)
+        c = Course.objects.get(id=cid) if cid else Course.objects.filter(crn=crn)[0]
         p = c.professor
 
         # Making days_of_week
