@@ -21,6 +21,15 @@ class Professor(models.Model):
     def __unicode__(self):
         return self.name
 
+
+class Textbook(models.Model):
+    name = models.CharField(max_length=32, null=True, blank=True)
+    course = models.ForeignKey('Course')
+    isbn = models.CharField(max_length=16, null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
+
 class Major(models.Model):
     name = models.CharField(max_length=16, null=True, blank=True)
 
