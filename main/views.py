@@ -1,5 +1,7 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
+from django.core.serializers.json import DjangoJSONEncoder
+
 import json
 
 from .models import *
@@ -58,4 +60,62 @@ def course_details(request):
     """
     Returns all the courses corresponding to a major_id.
     """
-    return HttpResponse("None")
+    if request.GET:
+        cid = request.GET['course_id']
+
+        c = Course.objects.get(id=cid)
+        p = c.professor
+
+        # Making days_of_week
+        days_of_week = ""
+        if course.mon:
+            days_of_week += "M"
+        if course.tue:
+            days_of_week += "T"
+        if course.wed:
+            days_of_week += "W"
+        if course.thu:
+            days_of_week += "R"
+        if course.fri:
+            days_of_week += "F"
+
+        cobj = {
+            "course_id": "<string>",
+            "course_name": "Multimedia Systems",
+            "course_num": "477",
+            "crn":"<string>",
+
+        "major":{
+                "name": "Electrical and Computer Engineering",
+                "abbrv": "ECE", 
+        },
+
+        "professor": {
+            "first_name": p.first_name,
+            "last_name": p.last_name,
+            "img_url": "",
+            "rating": 5, 
+        },
+
+        "textbooks":[
+                {
+                   "name": "<string>",
+                   "author": "<string>",
+                   "isbn": "<string>",
+                   "prices":[
+                        {
+                          "seller_name":"Amazon",
+                          "price": "$13.40",
+                          "link": "<url_string>",
+                        }
+                    ]
+                },
+            ],
+            "days_of_week": days_of_week,  # (string to represent which days are present)
+            "start_time": c.start_time,    # (24-hour two digit in PST),
+            "end_time": c.end_time,
+            "start_date": c.start_date # (month/day/year),
+            "end_date": c.end_date,
+        }
+
+
