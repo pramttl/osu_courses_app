@@ -55,7 +55,7 @@ class Textbook(models.Model):
         return self.name
 
 class Major(models.Model):
-    name = models.CharField(max_length=16, null=True, blank=True)
+    name = models.CharField(max_length=64, null=True, blank=True)
     abbrv = models.CharField(max_length=8, null=True, blank=True)
     image_url = models.URLField(null=True, blank=True)
 

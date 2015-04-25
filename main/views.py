@@ -23,16 +23,23 @@ def majors(request):
     """
     Returns all the majors corresponding to a major id.
     """
-    if request.GET:
-        return HttpResponse(json.dumps(Major.objects.all()))
 
+    if request.method == 'GET':
+        models = []
+        for obj in Major.objects.all():
+          models.append({
+                "name": obj.name,
+                "abbrv": obj.abbrv,
+                 "image_url": obj.image_url,
+           })
+        return HttpResponse(json.dumps(models))
 
 @csrf_exempt
 def courses(request):
     """
     Returns all the courses corresponding to a major_id.
     """
-    if request.GET:
+    if request.method == 'GET':
         mid = request.GET['major_id']
         term = request.GET['term']
 
@@ -60,7 +67,7 @@ def course_details(request):
     """
     Returns all the courses corresponding to a major_id.
     """
-    if request.GET:
+    if request.method == 'GET':
         cid = request.GET['course_id']
 
         c = Course.objects.get(id=cid)
@@ -114,7 +121,7 @@ def course_details(request):
             "days_of_week": days_of_week,  # (string to represent which days are present)
             "start_time": c.start_time,    # (24-hour two digit in PST),
             "end_time": c.end_time,
-            "start_date": c.start_date # (month/day/year),
+            "start_date": c.start_date, # (month/day/year),
             "end_date": c.end_date,
         }
 
