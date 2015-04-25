@@ -1,5 +1,5 @@
 from django.db import models
-
+from .helpers import *
 
 class Course(models.Model):
     """
@@ -30,6 +30,12 @@ class Course(models.Model):
 class Professor(models.Model):
     first_name = models.CharField(max_length=32, null=True, blank=True)
     last_name = models.CharField(max_length=32, null=True, blank=True)
+
+    def rating(self):
+       p = RateMyProf(self.first_name, self.last_name)
+       p.get_data()
+       return p.average_rating()
+
 
     def __unicode__(self):
         return self.name
