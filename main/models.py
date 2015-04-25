@@ -8,7 +8,7 @@ class Course(models.Model):
     crn = models.CharField(max_length=16, null=True, blank=True)
     name = models.CharField(max_length=32, null=True, blank=True)
     term = models.CharField(max_length=8, null=True, blank=True)
-    professor = models.ForeginKey(Professor)
+    professor = models.ForeignKey('Professor')
 
     def __unicode__(self):
         return self.name + ': ' + self.term
