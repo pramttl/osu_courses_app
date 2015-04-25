@@ -15,8 +15,8 @@ class Course(models.Model):
 
 
 class Professor(models.Model):
-    name = models.CharField(max_length=32, null=True, blank=True)
-    rating = models.IntegerField(null=True, blank=True)
+    first_name = models.CharField(max_length=32, null=True, blank=True)
+    last_name = models.CharField(max_length=32, null=True, blank=True)
 
     def __unicode__(self):
         return self.name
