@@ -8,7 +8,20 @@ class Course(models.Model):
     crn = models.CharField(max_length=16, null=True, blank=True)
     name = models.CharField(max_length=32, null=True, blank=True)
     term = models.CharField(max_length=8, null=True, blank=True)
-    professor = models.ForeignKey('Professor')
+    professor = models.ForeignKey('Professor', null=True, blank=True)
+    mon = models.BooleanField(default=False)
+    tue = models.BooleanField(default=False)
+    wed = models.BooleanField(default=False)
+    thu = models.BooleanField(default=False)
+    fri = models.BooleanField(default=False)
+
+    # Start time and end time for class on any given day
+    start_time = models.TimeField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
+
+    # Start date and end date for the whole class
+    start_date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
 
     def __unicode__(self):
         return self.name + ': ' + self.term
@@ -24,7 +37,7 @@ class Professor(models.Model):
 
 class Textbook(models.Model):
     name = models.CharField(max_length=32, null=True, blank=True)
-    course = models.ForeignKey('Course')
+    course = models.ForeignKey('Course', null=True, blank=True)
     isbn = models.CharField(max_length=16, null=True, blank=True)
 
     def __unicode__(self):
