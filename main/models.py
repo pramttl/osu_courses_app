@@ -4,8 +4,8 @@ from .helpers import *
 class Course(models.Model):
     crn = models.CharField(max_length=16, null=True, blank=True)
     name = models.CharField(max_length=32, null=True, blank=True)
-    course_num = models.CharField(max_length=4, null=True, blank=True) 
-    # Just the num, not the course abbrv. E.g. CS101 would be stored as 101
+    course_num = models.CharField(max_length=8, null=True, blank=True) 
+    # Just the num, not the course abbrv. E.g. CS 101 would be stored as 101
 
     term = models.CharField(max_length=8, null=True, blank=True)
 
@@ -56,7 +56,7 @@ class Textbook(models.Model):
 
 class Major(models.Model):
     name = models.CharField(max_length=16, null=True, blank=True)
-    abbrv = models.CharField(max_length=8, null=True, blank=True)
+    abbr = models.CharField(max_length=8, null=True, blank=True)
     image_url = models.URLField(null=True, blank=True)
 
     def __unicode__(self):
