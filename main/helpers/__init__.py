@@ -12,6 +12,12 @@ class RateMyProf:
 
         self.url = base_url + first_name + "+" + last_name + helper_url
 
+        self.name = ''
+        self.last_name = ''
+        self.average_rating = 0
+        self.helpful = 0
+        self.clarity = 0
+        self.easy = 0
 
     def crawlURL(self, addedURL):
         url = addedURL
@@ -22,10 +28,14 @@ class RateMyProf:
         data = self.crawlURL(self.url)
         io = StringIO(data)
         json_data = json.load(io)
-        self.name = json_data['response']['docs'][0]['teacherfirstname_t']
-        self.last_name = json_data['response']['docs'][0]['teacherlastname_t']
-        self.average_rating = json_data['response']['docs'][0]['averageratingscore_rf']
 
-        self.helpful = json_data['response']['docs'][0]['averagehelpfulscore_rf']
-        self.clarity = json_data['response']['docs'][0]['averageclarityscore_rf']
-        self.easy = json_data['response']['docs'][0]['averageeasyscore_rf']
+        try:
+                self.name = json_data['response']['docs'][0]['teacherfirstname_t']
+                self.last_name = json_data['response']['docs'][0]['teacherlastname_t']
+                self.average_rating = json_data['response']['docs'][0]['averageratingscore_rf']
+
+                self.helpful = json_data['response']['docs'][0]['averagehelpfulscore_rf']
+                self.clarity = json_data['response']['docs'][0]['averageclarityscore_rf']
+                self.easy = json_data['response']['docs'][0]['averageeasyscore_rf']
+        except:
+                pass

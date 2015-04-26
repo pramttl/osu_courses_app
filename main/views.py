@@ -36,7 +36,11 @@ def classes(request):
         mid = int(request.GET['major_id'])
         term = request.GET['term']
 
-        m = Major.objects.get(id=mid)
+        try:
+                m = Major.objects.get(id=mid)
+        except:
+                return HttpResponse(json.dumps([]))
+
         courses = Course.objects.filter(major=m)
 
         classes_sanitized = []
@@ -49,7 +53,7 @@ def classes(request):
                 class_obj["class_id"]  = str(c.id)
                 class_obj["class_name"] = str(c.course.name)
                 class_obj["class_num"] = str(c.course.course_num)
-                class_obj["professor_rating"] = int(c.professor.rating)
+                class_obj["professor_rating"] = int(c.professor.rating())
 
                 #XXX: Calculate cost of each textbook correctly
                 class_obj["osu_textbook_total"] = 100
