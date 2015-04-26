@@ -97,6 +97,7 @@ def class_details(request):
         cobj = {
             "class_id": str(c.id),
             "class_name": c.course.name,
+            "description": c.course.description,
             "class_num": c.course.course_num,
             "crn": c.crn,
 
