@@ -20,6 +20,7 @@ def majors(request):
         models = []
         for obj in Major.objects.all():
           models.append({
+                "major_id": obj.id,
                 "name": obj.name,
                 "abbr": obj.abbr,
                 "image_url": obj.image_url,
