@@ -100,7 +100,6 @@ def class_details(request):
             "description": c.course.description,
             "class_num": c.course.course_num,
             "crn": c.crn,
-
         "major":{
                 "name": c.course.major.name,
                 "abbr": c.course.major.abbr, 
@@ -110,7 +109,7 @@ def class_details(request):
             "first_name": p.first_name,
             "last_name": p.last_name,
             "img_url": "",
-            "rating": 5, 
+            "rating": p.rating(), 
         },
 
         "textbooks":[
