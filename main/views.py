@@ -136,3 +136,26 @@ def class_details(request):
         return HttpResponse(json.dumps(cobj, cls=DjangoJSONEncoder))
 
 
+@csrf_exempt
+def search(request):
+    """
+    Returns all the classes and majors corresponding to a search term.
+    """
+
+    if request.method == 'GET':
+        search_term = request.GET.get('q', None)
+
+       # Get all classes
+        class_name_pairs = Course.objects.all().values('id', 'name')
+        matching_ids = []
+
+        for pair in class_name_pairs:
+            if search_term in pair['name']:
+                matching_ids.append(pair['id'])
+
+        resp = {
+                "classes":matching_ids,
+                "majors":[],
+        }
+
+        return HttpResponse(json.dumps(resp, cls=DjangoJSONEncoder))

@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^majors/$', views.majors, name='majors'),
     url(r'^classes/$', views.classes, name='classes'),
     url(r'^class_details/$', views.class_details, name='class_details'),
+    url(r'^search/$', views.search, name='search'),
 ]
