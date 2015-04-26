@@ -76,17 +76,16 @@ WSGI_APPLICATION = 'osu_courses_app.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #}
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
+   # 'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   # }
+   'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '54.213.102.221',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
     }
 }
 
