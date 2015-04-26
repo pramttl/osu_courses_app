@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.core.serializers.json import DjangoJSONEncoder
+from django.db.models import Q
 
 import json
 
@@ -8,15 +9,6 @@ from .models import *
 import random
 
 from django.views.decorators.csrf import csrf_exempt
-
-
-@csrf_exempt
-def index(request):
-    """
-    Test url
-    """
-    return HttpResponse(json.dumps({ "test" : "success"}))
-
 
 @csrf_exempt
 def majors(request):
@@ -29,73 +21,76 @@ def majors(request):
         for obj in Major.objects.all():
           models.append({
                 "name": obj.name,
-                "abbrv": obj.abbrv,
-                 "image_url": obj.image_url,
+                "abbr": obj.abbr,
+                "image_url": obj.image_url,
            })
         return HttpResponse(json.dumps(models))
 
 @csrf_exempt
-def courses(request):
+def classes(request):
     """
     Returns all the courses corresponding to a major_id.
     """
     if request.method == 'GET':
-        mid = request.GET['major_id']
+        mid = int(request.GET['major_id'])
         term = request.GET['term']
 
         m = Major.objects.get(id=mid)
-        courses = Course.objects.filter(major=m.id)
+        courses = Course.objects.filter(major=m)
 
-        courses_sanitized = []
+        classes_sanitized = []
 
-        cobj = {}
-        for c in courses:
-            cobj["course_id"]  = str(c.id),
-            cobj["course_name"] = str(c.name),
-            cobj["course_num"] = str(c.course_num),
-            cobj["professor_rating"] = int(c.professor.rating),
+        for course in courses:
+            classes = Class.objects.filter(term=term, course=course)
 
-            #XXX: Calculate cost of each textbook correctly
-            cobj["osu_textbook_total"] = 10
-            courses_sanitized.append(cobj)
+            for c in classes:
+                class_obj = {}
+                class_obj["class_id"]  = str(c.id)
+                class_obj["class_name"] = str(c.course.name)
+                class_obj["class_num"] = str(c.course.course_num)
+                class_obj["professor_rating"] = int(c.professor.rating)
 
-        return HttpResponse(json.dumps(courses_sanitized))
+                #XXX: Calculate cost of each textbook correctly
+                class_obj["osu_textbook_total"] = 100
+                classes_sanitized.append(class_obj)
+
+        return HttpResponse(json.dumps(classes_sanitized))
 
 
 @csrf_exempt
-def course_details(request):
+def class_details(request):
     """
     Returns all the courses corresponding to a major_id.
     """
     if request.method == 'GET':
-        cid = request.GET['course_id']
-        crn = request.GET['course_crn']
+        class_id = int(request.GET['class_id'])
+        class_crn = request.GET['class_crn']
 
-        c = Course.objects.get(id=cid) if cid else Course.objects.filter(crn=crn)[0]
+        c = Class.objects.filter(Q(id=class_id) | Q(crn=class_crn))[0]
         p = c.professor
 
         # Making days_of_week
         days_of_week = ""
-        if course.mon:
+        if c.mon:
             days_of_week += "M"
-        if course.tue:
+        if c.tue:
             days_of_week += "T"
-        if course.wed:
+        if c.wed:
             days_of_week += "W"
-        if course.thu:
+        if c.thu:
             days_of_week += "R"
-        if course.fri:
+        if c.fri:
             days_of_week += "F"
 
         cobj = {
-            "course_id": "<string>",
-            "course_name": "Multimedia Systems",
-            "course_num": "477",
-            "crn":"<string>",
+            "class_id": str(c.id),
+            "class_name": c.course.name,
+            "class_num": c.course.course_num,
+            "crn": c.crn,
 
         "major":{
-                "name": "Electrical and Computer Engineering",
-                "abbrv": "ECE", 
+                "name": c.course.major.name,
+                "abbr": c.course.major.abbr, 
         },
 
         "professor": {
@@ -119,11 +114,11 @@ def course_details(request):
                     ]
                 },
             ],
-            "days_of_week": days_of_week,  # (string to represent which days are present)
-            "start_time": c.start_time,    # (24-hour two digit in PST),
-            "end_time": c.end_time,
-            "start_date": c.start_date, # (month/day/year),
-            "end_date": c.end_date,
+        "days_of_week": days_of_week,  # (string to represent which days are present)
+        "start_time": c.start_time,    # (24-hour two digit in PST),
+        "end_time": c.end_time,
+        "start_date": c.start_date, # (month/day/year),
+        "end_date": c.end_date,
         }
 
 

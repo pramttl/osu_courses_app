@@ -1,16 +1,38 @@
 from django.db import models
 from .helpers import *
 
+class Major(models.Model):
+    name = models.CharField(max_length=64, null=True, blank=True)
+    abbr = models.CharField(max_length=8, null=True, blank=True)
+    image_url = models.URLField(null=True, blank=True)
+
+    def __unicode__(self):
+        if self.name:
+            return self.name
+        else:
+            return "No Name"
+
+
 class Course(models.Model):
-    crn = models.CharField(max_length=16, null=True, blank=True)
+    # ForeginKey fields
+    major = models.ForeignKey('Major', null=True, blank=True)
+
     name = models.CharField(max_length=32, null=True, blank=True)
     course_num = models.CharField(max_length=8, null=True, blank=True) 
     # Just the num, not the course abbrv. E.g. CS 101 would be stored as 101
 
-    term = models.CharField(max_length=8, null=True, blank=True)
+    credits = models.CharField(max_length=4, null=True, blank=True) 
+    description = models.TextField(null=True, blank=True)
 
-    # ForeginKey fields
-    major = models.ForeignKey('Major', null=True, blank=True)
+    def __unicode__(self):
+        return self.major.abbr + ' ' + self.course_num
+
+
+class Class(models.Model):
+    course = models.ForeignKey('Course')
+
+    crn = models.CharField(max_length=16, null=True, blank=True)
+    term = models.CharField(max_length=8, null=True, blank=True)
     professor = models.ForeignKey('Professor', null=True, blank=True)
 
     mon = models.BooleanField(default=False)
@@ -29,7 +51,7 @@ class Course(models.Model):
     loc = models.CharField(max_length=32, null=True, blank=True)
 
     def __unicode__(self):
-        return self.name + ': ' + self.term
+        return self.course.name + ': ' + self.term
 
 
 class Professor(models.Model):
@@ -43,21 +65,13 @@ class Professor(models.Model):
 
 
     def __unicode__(self):
-        return self.name
+        return self.first_name + ' ' + self.last_name
 
 
 class Textbook(models.Model):
     name = models.CharField(max_length=32, null=True, blank=True)
     course = models.ForeignKey('Course', null=True, blank=True)
     isbn = models.CharField(max_length=16, null=True, blank=True)
-
-    def __unicode__(self):
-        return self.name
-
-class Major(models.Model):
-    name = models.CharField(max_length=64, null=True, blank=True)
-    abbr = models.CharField(max_length=8, null=True, blank=True)
-    image_url = models.URLField(null=True, blank=True)
 
     def __unicode__(self):
         return self.name
