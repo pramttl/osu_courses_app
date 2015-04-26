@@ -15,9 +15,13 @@ termMapping = {'F15': '2015-Fall', 'W15': '2015-Winter', 'W16': '2016-Winter', '
 for c in Class.objects.all():
         s = 'http://verbacompare.osubeaverstore.com/compare/books?id=%s__%s__%s__001' % (termMapping[c.term], c.course.major.abbr,
 c.course.course_num)
-        books = json.loads(urllib2.urlopen(s).read())
 
-        time.sleep(1)
+        try:
+                stream = urllib2.urlopen(s)
+        except:
+                continue
+        
+        books = json.loads(stream.read())
 
         for book in books:
                 book, created = Textbook.objects.get_or_create(name=book['title'], isbn=book['isbn'], osu_price=book['offers'][0]['price'],
