@@ -17,7 +17,7 @@ class Course(models.Model):
     # ForeginKey fields
     major = models.ForeignKey('Major', null=True, blank=True)
 
-    name = models.CharField(max_length=32, null=True, blank=True)
+    name = models.CharField(max_length=64, null=True, blank=True)
     course_num = models.CharField(max_length=8, null=True, blank=True) 
     # Just the num, not the course abbrv. E.g. CS 101 would be stored as 101
 
@@ -73,9 +73,10 @@ class Professor(models.Model):
 
 class Textbook(models.Model):
     name = models.CharField(max_length=32, null=True, blank=True)
+    cover_url = models.CharField(max_length=32, null=True, blank=True)
     textbook_class = models.ForeignKey('Class', null=True, blank=True)
     isbn = models.CharField(max_length=16, null=True, blank=True)
-
+       
     amazon_price = models.CharField(max_length=16, null=True, blank=True)
     osu_price = models.CharField(max_length=16, null=True, blank=True)
 

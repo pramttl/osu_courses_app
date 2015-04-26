@@ -56,7 +56,11 @@ def classes(request):
                 class_obj["professor_rating"] = int(c.professor.rating()[0])
 
                 #XXX: Calculate cost of each textbook correctly
-                class_obj["osu_textbook_total"] = 100
+                books = Textbook.objects.filter(textbook_class = c)
+                total = 0.0
+                for book in books:
+                        total += float(book.osu_price)
+                class_obj["osu_textbook_total"] = "$"+str(total)
                 classes_sanitized.append(class_obj)
 
         return HttpResponse(json.dumps(classes_sanitized))
@@ -95,6 +99,7 @@ def class_details(request):
             days_of_week += "F"
 
         ratings = p.rating()
+
         cobj = {
             "class_id": str(c.id),
             "class_name": c.course.name,
@@ -118,20 +123,7 @@ def class_details(request):
            "easiness": ratings[3],
         },
 
-        "textbooks":[
-                {
-                   "name": "<string>",
-                   "author": "<string>",
-                   "isbn": "<string>",
-                   "prices":[
-                        {
-                          "seller_name":"Amazon",
-                          "price": "$13.40",
-                          "link": "<url_string>",
-                        }
-                    ]
-                },
-            ],
+        
         "days_of_week": days_of_week,  # (string to represent which days are present)
         "start_time": c.start_time,    # (24-hour two digit in PST),
         "end_time": c.end_time,
@@ -139,6 +131,17 @@ def class_details(request):
         "end_date": c.end_date,
         }
 
+        # Add textbooks
+        books = Textbook.objects.filter(textbook_class = c)
+        book_models = []
+        for book in books:
+                book_models.append({"name": book.name, 
+                                    "author": "",
+                                    "isbn": book.isbn,
+                                    "prices": [{"seller_name": "OSU Book Store", "price":"$"+book.osu_price}, {"seller_name": "Amazon",
+"price": "$"+book.amazon_price}]})
+
+        cobj['textbooks'] = book_models
         return HttpResponse(json.dumps(cobj, cls=DjangoJSONEncoder))
 
 

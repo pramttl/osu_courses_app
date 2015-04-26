@@ -10,7 +10,7 @@ class RateMyProf:
     def __init__(self, first_name, last_name):
         helper_url = '+AND+schoolid_s%3A742&defType=edismax&qf=teacherfullname_t^1000+autosuggest&bf=pow%28total_number_of_ratings_i%2C2.1%29&sort=total_number_of_ratings_i+desc&siteName=rmp&rows=20&start=0&fl=pk_id+teacherfirstname_t+teacherlastname_t+total_number_of_ratings_i+averageratingscore_rf+averagehelpfulscore_rf+averageclarityscore_rf+averageeasyscore_rf+schoolid_s'
 
-        self.url = base_url + first_name + "+" + last_name + helper_url
+        self.url = base_url + last_name + helper_url
 
         self.name = ''
         self.last_name = ''
