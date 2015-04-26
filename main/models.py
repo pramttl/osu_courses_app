@@ -73,8 +73,11 @@ class Professor(models.Model):
 
 class Textbook(models.Model):
     name = models.CharField(max_length=32, null=True, blank=True)
-    course = models.ForeignKey('Course', null=True, blank=True)
+    textbook_class = models.ForeignKey('Class', null=True, blank=True)
     isbn = models.CharField(max_length=16, null=True, blank=True)
+
+    amazon_price = models.CharField(max_length=16, null=True, blank=True)
+    osu_price = models.CharField(max_length=16, null=True, blank=True)
 
     def __unicode__(self):
         return self.name
