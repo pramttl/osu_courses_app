@@ -1,4 +1,4 @@
-Student Experience Center (SEC),44.5637806,-123.2794442
+SEC,Student Experience Center,44.5637806,-123.2794442
 Hal,Halsell Hall,44.5609298,-123.2767843
 OAB,Ocean Administration Building,44.5685206,-123.2797014
 OcSB,Oceanography Staging Building,44.5590653,-123.2857636
