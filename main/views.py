@@ -68,10 +68,17 @@ def class_details(request):
     Returns all the courses corresponding to a major_id.
     """
     if request.method == 'GET':
-        class_id = int(request.GET['class_id'])
-        class_crn = request.GET['class_crn']
+        class_id = request.GET.get('class_id', None)
+        class_crn = request.GET.get('class_crn', None)
 
-        c = Class.objects.filter(Q(id=class_id) | Q(crn=class_crn))[0]
+        if class_id:
+            class_id = int(class_id)
+            c = Class.objects.filter(id=class_id)[0]
+        elif class_crn:
+            c = Class.objects.filter(crn=class_crn)[0]
+        else:
+            return HttpResponse({"error": "error"})
+
         p = c.professor
 
         # Making days_of_week
@@ -125,5 +132,7 @@ def class_details(request):
         "start_date": c.start_date, # (month/day/year),
         "end_date": c.end_date,
         }
+
+        return HttpResponse(json.dumps(cobj, cls=DjangoJSONEncoder))
 
 
