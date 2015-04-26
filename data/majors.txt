@@ -1,0 +1,259 @@
+LS,Liberal Studies
+OPOI,OS/Poitiers, France
+YDE,4-H Youth Development Educatio
+LING,Linguistics
+OETC,OS/Puebla, Mexico
+OUDL,OS/Puebla, Mexico (Summer)
+ALS,Academic Learning Services
+MGMT,Management
+OQRO,OS/Queretaro, Mexico
+ACTG,Accounting
+MFGE,Manufacturing Engineering
+OUSF,OS/Quito, Ecuador
+AHE,Adult Ed & Higher Ed Leadershp
+MRM,Marine Resource Management
+OQUI,OS/Quito, Ecuador
+AS,Aerospace Studies
+MRKT,Marketing
+OROS,OS/Rosario, Argentina
+AREC,Agricultural & Resource Econom
+MPP,Master of Public Policy
+ORUS,OS/Russia, Univ of Arizona
+AED,Agricultural Education
+MATS,Materials Science
+OSAR,OS/Saarlands, Germany
+AGRI,Agricultural Sci, College of
+MTH,Mathematics
+OSCA,OS/Scandinavia
+AG,Agriculture-General
+MIME,Mech/Ind/Mfg Engineering
+OSFS,OS/School for Field Studies
+ASL,American Sign Language
+ME,Mechanical Engineering
+OSIT,OS/School for Intl Training
+ANS,Animal Sciences
+MP,Medical Physics
+OSSS,OS/Sea Semester
+ANTH,Anthropology
+MB,Microbiology
+OSEG,OS/Segovia, Spain
+AEC,Applied Economics
+MS,Military Science
+OSAS,OS/Semester at Sea
+ARAB,Arabic
+MCB,Molecular & Cellular Biology
+ODKU,OS/Seoul Dankook Exchange
+ART,Art
+MUS,Music
+OEWH,OS/Seoul, South Korea
+ASN,Asian Languages and Culture
+MUP,Music (Studio)
+OYON,OS/Seoul, South Korea
+ATS,Atmospheric Sciences
+MUED,Music Education
+OSIC,OS/Sicily Summer Prgm, Italy
+OSIE,OS/Siena, Italy
+BB,Biochemistry and Biophysics
+NR,Natural Resources
+OSIN,OS/Singapore
+BHS,BioHealth Sciences
+NS,Naval Science
+OPRE,OS/South Africa
+BEE,Biological & Ecological Engr
+NMC,New Media Communications
+OYEU,OS/South Korea
+BIOE,Biological Engineering
+NE,Nuclear Engineering
+OSTE,OS/Stellenbosch, South Africa
+BI,Biology
+NUTR,Nutrition
+ODEA,OS/Study Center in Australia
+BRR,Bioresource Research
+OCOS,OS/Study in Costa Rica
+BOT,Botany and Plant Pathology
+OEAS,Ocean Earth & Atmospheric Sci
+OSUS,OS/Sussex, England
+BA,Business Administration
+OC,Oceanography
+OUMA,OS/Sydney, Australia
+OAAR,OS/Aarhus, Denmark
+OUTS,OS/Sydney, Australia
+CBEE,Chem, Bio, Enviro Engineering
+OAPI,OS/Academic Programs Intl
+OSYD,OS/Sydney, Australia
+CHE,Chemical Engineering
+OGHA,OS/Accra, Ghana
+OFJU,OS/Taipei, Taiwan
+CH,Chemistry
+OAHA,OS/AHA International
+OFJX,OS/Taipei, Taiwan Fu Jen Univ.
+CHN,Chinese
+OPBL,OS/Akita Proj Based Learning
+OAGU,OS/Tokyo, Aoyama Gakuim Univ.
+CCE,Civil and Construction Engr
+OAKI,OS/Akita, Japan
+OWAS,OS/Tokyo, Waseda University
+CE,Civil Engineering
+OANG,OS/Angers, France
+OJCU,OS/Townsville, Australia
+COMM,Communication
+ODH1,OS/Art and Architecture Tour
+OSIP,OS/Tubingen, Germany
+CS,Computer Science
+OATH,OS/Athens, Greece
+OTUN,OS/Tunis, Tunisia
+CEM,Construction Engineering Mngmt
+OAUS,OS/Australia
+OCOR,OS/U College Cork, Ireland
+CSS,Crop & Soil Science
+OBMB,OS/Bad Mergentheim, Germany
+OLIM,OS/U of Limerick, Ireland
+CROP,Crop Science
+OBWU,OS/Baden-Wurttemberg, Germany
+OUHC,OS/UHC Intl Service Learning
+OCHU,OS/Bangkok, Thailand
+OSHF,OS/Univ of Sheffield, England
+DHE,Design and Human Environment
+OBAN,OS/Bangor, Wales
+OVAL,OS/Valdivia, Chile
+OCSU,OS/Bathurst or Wagga, Australi
+OSAB,OS/Various Locations Abroad
+ECON,Economics
+OBLC,OS/Beijing Lang&Culture, China
+OVIE,OS/Vienna, Austria
+ECE,Electrical & Computer Engineer
+OUBC,OS/British Columbia
+OVUE,OS/Vienna, Austria
+ENGR,Engineering Science
+OANU,OS/Canberra, Australia
+OCHI,OS/Winter term in Chile
+ENG,English
+OCAN,OS/Cantabria, Santander, Spain
+ENT,Entomology
+OMEN,OS/Centers in Czech Republic
+PAX,Peace Studies
+ENVE,Environmental Engineering
+OPAY,OS/Chiang Mai, Thailand
+PHAR,Pharmacy
+ENSC,Environmental Sciences
+OBIO,OS/Chillan, Chile
+PHL,Philosophy
+ES,Ethnic Studies
+OCBY,OS/Christchurch, New Zealand
+PAC,Physical Activity Courses
+EXSS,Exercise and Sport Science
+ONZC,OS/Christchurch, New Zealand
+PH,Physics
+OCIE,OS/CIEE study abroad
+PBG,Plant Breeding & Genetics
+FILM,Film Studies
+OCBS,OS/Copenhagen, Denmark
+PS,Political Science
+FIN,Finance
+OCUB,OS/Cuban Culture and Politics
+PSM,Professional Science Masters
+FW,Fisheries and Wildlife
+OTEC,OS/Cuernavaca, Guadalajara, Me
+PSY,Psychology
+FCSJ,Food in Culture,Social Justice
+ODUB,OS/Dublin, Ireland
+H,Public Health
+FST,Food Science and Technology
+OEWA,OS/Explor World Agr Study Tour
+PPOL,Public Policy
+FES,Forest Ecosystems and Society
+ODH2,OS/Fashion Week Study Tour
+FE,Forest Engineering
+OFEZ,OS/Fez, Morocco
+QS,Queer Studies
+FS,Forest Science
+OFIJ,OS/Fiji
+FOR,Forestry
+OSAC,OS/Florence, Italy
+RHP,Radiation Health Physics
+FR,French
+OSPA,OS/Forest Management in Spain
+RNG,Rangeland Ecology & Management
+OSHO,OS/Fujisawa, Japan
+REL,Religious Studies
+GS,General Science
+OBOT,OS/Gaborone, Botswana
+ROB,Robotics
+GPH,Geophysics
+OGE3,OS/Global E3 Program
+RS,Rural Studies
+GEO,Geosciences
+OGUA,OS/Guaymas, Mexico
+RUS,Russian
+GER,German
+OCHK,OS/Hong Kong, China
+GRAD,Graduate Education
+OICE,OS/Iceland
+SED,Science & Mathematics Educ
+GD,Graphic Design
+OIFS,OS/Institute for Study Abroad
+SOC,Sociology
+OINT,OS/Internship
+SOIL,Soil Science
+HHS,Health and Human Sciences
+OMAM,OS/Internship MAMTA, India
+SPAN,Spanish
+HEBR,Hebrew
+OIRP,OS/Int'l Ugrad Research Prog
+ST,Statistics
+HST,History
+OIN2,OS/INTO Study Abroad
+SUS,Sustainability
+HSTS,History of Science
+OIRE,OS/Ireland
+SNR,Sustainable Natural Resources
+HC,Honors College
+OJYV,OS/Jyvaskyla, Finland
+HORT,Horticulture
+OIND,OS/Kala Raksha, India
+TCE,Teacher & Counselor Education
+HDFS,Human Dev and Family Sciences
+OKEF,OS/Kefalonia, Greece
+TA,Theatre Arts
+OAGD,OS/Kristiansand, Norway
+TOX,Toxicology
+IE,Industrial and Mfg Engineering
+ODOS,OS/Kyoto, Japan, Doshisha
+TCS,Twentieth Century Studies
+IEPA,Intensive English Pgm Acad Eng
+OLAN,OS/Lancaster, England
+IEPH,Intensive English Pgm Gen Engl
+OAIU,OS/London
+VMB,Veterinary Medicine Biomedical
+IEPG,Intensive English Pgm Gen Engl
+OLON,OS/London, England
+VMC,Veterinary Medicine Clinical
+IST,Interdisciplinary Programs
+OLUL,OS/Lulea, Sweden
+INTL,International Degree
+OLUN,OS/Lund, Sweden
+WRE,Water Resources Engineering
+IT,Italian
+ODTU,OS/Lyngby, Denmark
+WRP,Water Resources Policy and Mgt
+OLYO,OS/Lyon, France
+WRS,Water Resources Science
+JPN,Japanese
+OMAC,OS/Macerata, Italy
+WGSS,Women, Gender, and Sexuality
+JCHS,Joint Campus-Health Sciences U
+OMOR,OS/Morelia, Mexico
+WSE,Wood Science and Engineering
+JCPS,Joint Campus-Portland State
+ONTU,OS/National Taiwan University
+WLC,World Languages and Cultures
+JCUO,Joint Campus-Univ of Oregon
+OGRO,OS/Netherlands; Germany; Spain
+WR,Written English
+ONOT,OS/Nottingham, England
+LEAD,Leadership
+OOVD,OS/Oviedo, Spain
+Z,Zoology
+LA,Liberal Arts
+OPET,OS/Petition Programs
+
