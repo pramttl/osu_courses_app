@@ -100,6 +100,8 @@ def class_details(request):
             "description": c.course.description,
             "class_num": c.course.course_num,
             "crn": c.crn,
+            "lat": c.lat,
+            "lon": c.lon,
         "major":{
                 "name": c.course.major.name,
                 "abbr": c.course.major.abbr, 
