@@ -64,7 +64,7 @@ class Professor(models.Model):
     def rating(self):
        p = RateMyProf(self.first_name, self.last_name)
        p.get_data()
-       return p.average_rating
+       return (p.average_rating, p.helpful, p.clarity, p.easy)
 
 
     def __unicode__(self):

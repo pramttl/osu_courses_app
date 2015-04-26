@@ -53,7 +53,7 @@ def classes(request):
                 class_obj["class_id"]  = str(c.id)
                 class_obj["class_name"] = str(c.course.name)
                 class_obj["class_num"] = str(c.course.course_num)
-                class_obj["professor_rating"] = int(c.professor.rating())
+                class_obj["professor_rating"] = int(c.professor.rating()[0])
 
                 #XXX: Calculate cost of each textbook correctly
                 class_obj["osu_textbook_total"] = 100
@@ -94,6 +94,7 @@ def class_details(request):
         if c.fri:
             days_of_week += "F"
 
+        ratings = p.rating()
         cobj = {
             "class_id": str(c.id),
             "class_name": c.course.name,
@@ -111,7 +112,10 @@ def class_details(request):
             "first_name": p.first_name,
             "last_name": p.last_name,
             "img_url": "",
-            "rating": p.rating(), 
+            "rating": ratings[0], 
+            "helpfulnes": ratings[1],
+            "clarity": ratings[2],
+           "easiness": ratings[3],
         },
 
         "textbooks":[
