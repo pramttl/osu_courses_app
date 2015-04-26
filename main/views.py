@@ -145,17 +145,34 @@ def search(request):
     if request.method == 'GET':
         search_term = request.GET.get('q', None)
 
+       # Get all majors
+        major_name_pairs = Major.objects.all().values('id', 'name')
+        matching_major_ids = []
+
+        for pair in major_name_pairs:
+            if pair['name'] and search_term.lower() in pair['name'].lower():
+                matching_major_ids.append(pair['id'])
+
+        major_models = []
+        for obj in Major.objects.filter(id__in=matching_major_ids):
+          major_models.append({
+                "major_id": obj.id,
+                "name": obj.name,
+                "abbr": obj.abbr,
+                "image_url": obj.image_url,
+           })
+
        # Get all classes
         class_name_pairs = Course.objects.all().values('id', 'name')
-        matching_ids = []
+        matching_class_ids = []
 
         for pair in class_name_pairs:
-            if search_term in pair['name']:
-                matching_ids.append(pair['id'])
+            if search_term.lower() in pair['name'].lower():
+                matching_class_ids.append(pair['id'])
 
         resp = {
-                "classes":matching_ids,
-                "majors":[],
+                "classes":matching_class_ids,
+                "majors":major_models,
         }
 
         return HttpResponse(json.dumps(resp, cls=DjangoJSONEncoder))
