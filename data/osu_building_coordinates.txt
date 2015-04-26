@@ -1,0 +1,142 @@
+Student Experience Center (SEC),44.5637806,-123.2794442
+Hal,Halsell Hall,44.5609298,-123.2767843
+OAB,Ocean Administration Building,44.5685206,-123.2797014
+OcSB,Oceanography Staging Building,44.5590653,-123.2857636
+EHSA,EH&S Annex,44.5658568,-123.289096
+Wlkn,Wilkinson Hall,44.5637806,-123.2794442
+Pride,Pride Center,44.560987,-123.2747694
+TPav,Tennis Pavillion,44.5623003,-123.2828793
+CCC,Child Care Center,44.5630857,-123.2716654
+Haw,Hawley Hall,44.5637806,-123.2794442
+Gill,Gill Coliseum,44.5612746,-123.280588
+Gilm,Gilmore Hall,44.5665117,-123.2805194
+Covl,Covell Hall,44.5670745,-123.2748711
+McAF,McAlexander Fieldhouse,44.5635079,-123.2753856
+Gilk,Gilkey Hall,44.5664872,-123.2772298
+Magr,Magruder Hall,44.5606597,-123.2858162
+DxRC,Dixon Recreation Center,44.5631431,-123.2786484
+Gilb,Gilbert Hall,44.5678207,-123.2763544
+VLib,Valley Library,44.5637806,-123.2794442
+Burt,Burt Hall,44.5685293,-123.2806271
+RC,Radiation Center,44.5651878,-123.2889983
+SPC,Sports Performance Center,44.5610702,-123.2816955
+Navy,Naval ROTC Armory,44.5621137,-123.2780068
+SSCr,Student Sustainability Center,44.5602486,-123.2743503
+Bat,Batcheller Hall,44.567043,-123.2751777
+NFSRC,National Forage Seed Research Center,44.566484,-123.288997
+ClkL,Clark Laboratory,44.5659199,-123.2872839
+KAd,Kerr Administration Building,44.5640381,-123.2746188
+HDMC,UHDS Maintenance Center,44.5615174,-123.2891483
+VFbC,Valley Football Center,44.5601726,-123.2822271
+Cau,Cauthorn Hall,44.5637806,-123.2794442
+CrpS,Crop Science Building,44.5663931,-123.2852592
+Adam,Transit & Parking Services,44.5610189,-123.2747795
+Cal,Callahan Hall,44.5640537,-123.2733732
+Bexl,Bexell Hall,44.5671011,-123.2773295
+Goss,Goss Stadium,44.563075,-123.2774479
+DGeo,Dawes House,44.5687428,-123.2796173
+Resr,Reser Stadium,44.5637806,-123.2794442
+OCCUH,Oak Creek Center for Urban Horticulture,44.5637806,-123.2794442
+Sack,Sackett Hall,44.5637806,-123.2794442
+MoPl,Transportation Services,44.5637806,-123.2794442
+OATF,Oldfield Animal Teaching Facility,44.5637806,-123.2794442
+Finl,Finley Hall,44.561098,-123.2777652
+PrSB,Property Services,44.5637806,-123.2794442
+OS,Oceanography Shops Buildings,44.5639497,-123.2746125
+LAR,Lab Animal Resource Center,44.5624584,-123.2861961
+BnAn,Benton Annex (Women's Center),44.5658461,-123.2747227
+Wngr,Weniger Hall,44.5678883,-123.277449
+Snel,Snell Hall,44.5637806,-123.2794442
+West,West International House,44.5637806,-123.2794442
+OCB,Oak Creek Building,44.5578444,-123.2857908
+BfBn,Beef Barn,44.5637806,-123.2794442
+Blss,Bloss Hall,44.560143,-123.277507
+DxLg,Dixon Lodge,44.5648131,-123.2698519
+EGrn,East Greenhouse,44.5672131,-123.2825204
+Rich,Richardson Hall,44.5636548,-123.2861745
+HkLg,Heckart Lodge,44.5643036,-123.2833734
+AEL,Aero Engineering Lab,44.5588154,-123.2856638
+More,Moreland Hall,44.5642572,-123.279385
+PSHC,Plageman Student Health,44.5677501,-123.2783531
+LSC,LaSells Stewart Center,44.5590466,-123.2787579
+GVGC,Gladys Valley Gymnastics,44.5649372,-123.2752126
+Fund,Foundation Building,44.5637806,-123.2794442
+Heat,Heating Plant,44.5627975,-123.2755385
+Key,Key Shop,44.5637806,-123.2794442
+BlkC,Lonnie B. Harris Black Cultural Ctr.,44.5684394,-123.278288
+SPav,Stock Judging Pavilion,44.5637806,-123.2794442
+GEM,The GEM,44.5637806,-123.2794442
+Info,Information Booth,44.5653401,-123.2919642
+EC,Energy Center,44.5641369,-123.2891496
+Arnd,Arnold Cafeteria,44.5606219,-123.2777674
+WsDn,West Dining Hall,44.563976,-123.2835512
+AvLg,Avery Lodge,44.565082,-123.2689947
+Graf,Graf Hall,44.5676638,-123.274867
+Mfd,Merryfield Hall,44.5673006,-123.2739082
+Fair,Fairbanks Hall,44.5650646,-123.2804139
+StAg,Strand Agricultural Hall,44.5656488,-123.2772381
+LPSC,Linus Pauling Science Center,44.5665368,-123.2836245
+Owen,Owen Hall,44.5670722,-123.2738048
+Rog,Rogers Hall,44.5676557,-123.2756885
+MU,Memorial Union,44.5649238,-123.2789169
+Shep,Shepard Hall,44.567165,-123.275985
+Dear,Dearborn Hall,44.567329,-123.2755179
+VtBn,Vet Dairy Barn,44.562387,-123.2867884
+WB,Women's Building,44.5657753,-123.2805533
+SSC,Student Success Center,44.5637806,-123.2794442
+ACC,Asian & Pacific Islander Cultural Ctr.,44.5637806,-123.2794442
+CHAC,CH2M Hill Alumni Center,44.5637806,-123.2794442
+BalE,Ballard Extension Hall,44.5672007,-123.2796288
+NALh,Native American Longhouse Eena Haws,44.5640367,-123.2795178
+FSL,Forest Sciences Lab,44.5640334,-123.2876908
+RdLg,Reed Lodge,44.5643096,-123.2839944
+HFC,Hallie Ford Center,44.5670293,-123.2803475
+ILLC,International Living Learning Center,44.5601972,-123.2761305
+Cord,Cordley Hall,44.5673223,-123.2813592
+JSB,Jefferson Street Building,44.5637806,-123.2794442
+Kear,Kearney Hall,44.5670602,-123.2731864
+HWRL,Hinsdale Wave Research Lab,44.5638326,-123.2910151
+VRL,Vet Research Lab,44.5637806,-123.2794442
+Lang,Langton Hall,44.564117,-123.2783872
+HCRL,Horticultural Crops Research Laboratory,44.5675577,-123.2891316
+GbAd,Gilbert Hall Addition,44.5637806,-123.2794442
+Phar,Pharmacy Building,44.5653108,-123.2748243
+Wfd,Weatherford Hall,44.5637806,-123.2794442
+Mlm,Milam Hall,44.5664786,-123.2789414
+OxHs,Oxford House,44.5644584,-123.268892
+Nash,Nash Hall,44.5662176,-123.2826968
+FSSh,Facilities Services Shop,44.566234,-123.282713
+OBS,OSU Beaver Store,44.5637806,-123.2794442
+Wald,Waldo Hall,44.5640944,-123.2772196
+Bate,Bates Hall,44.5673896,-123.2803759
+IndP,Merrit Truax Indoor Practice Facility,44.5611682,-123.2839395
+Pvy,Peavy Hall,44.5640856,-123.2855237
+Dryd,Dryden Hall,44.5630436,-123.2851314
+KEC,Kelley Engineering Center,44.5671987,-123.278715
+McDn,McNary Dining Center,44.5640884,-123.2721286
+SL,Seed Lab,44.5670658,-123.2876815
+FmSv,Farm Services,44.5637806,-123.2794442
+ALS,Agricultural & Life Sciences,44.5637806,-123.2794442
+FSSt,Facilities Services Stores,44.5637806,-123.2794442
+Hov,Hovland Hall,44.5664262,-123.2812826
+ERL,EPA Water Quality Research Lab,44.5637806,-123.2794442
+AzHs,Azalea House,44.5651396,-123.2695449
+WGrn,West Greenhouse,44.5637806,-123.2794442
+With,Withycombe Hall,44.5671835,-123.2835782
+VHBn,Vet Horse Barn,44.5611798,-123.2869588
+Casc,Public Safety Office,44.56152,-123.2756276
+GmAn,Gilmore Annex,44.5666411,-123.280869
+Buxt,Buxton Hall,44.5644007,-123.2820034
+HGI,Hilton Garden Inn,44.557662,-123.278802
+a,Hogg Animal Metabolism,44.5637806,-123.2794442
+Glsn,Gleeson Hall,44.5671738,-123.2766331
+Bent,Benton Hall,44.5662078,-123.2742758
+Wil,Wilson Hall,44.5637806,-123.2794442
+MCC,Milne Computer Lab,44.5663894,-123.275312
+Ap,Apiary Group,44.5637806,-123.2794442
+Pol,Poling Hall,44.5637806,-123.2794442
+Wgnd,Wiegand Hall,44.5671656,-123.2853452
+Kidd,Kidder Hall,44.5665029,-123.2761492
+McNy,McNary Hall,44.5643843,-123.2718429
+Furm,Furman Hall,44.5637806,-123.2794442
+OrcC,Orchard Court Complex,44.5637806,-123.2794442
