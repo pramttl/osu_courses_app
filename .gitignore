@@ -4,3 +4,4 @@ db.sqlite3
 temp/*
 data/*
 logs.txt
+osu_courses_app/local_settings.py

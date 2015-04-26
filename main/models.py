@@ -50,6 +50,9 @@ class Class(models.Model):
     end_date = models.DateField(null=True, blank=True)
     loc = models.CharField(max_length=32, null=True, blank=True)
 
+    lat = models.CharField(max_length=32, null=True, blank=True)
+    lon = models.CharField(max_length=32, null=True, blank=True)
+
     def __unicode__(self):
         return self.course.name + ': ' + self.term
 
