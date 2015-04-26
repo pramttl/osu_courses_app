@@ -163,15 +163,21 @@ def search(request):
            })
 
        # Get all classes
-        class_name_pairs = Course.objects.all().values('id', 'name')
-        matching_class_ids = []
+        classes = Class.objects.filter(course__name__contains=search_term)
+        class_models = []
+        for c in classes:
+            class_obj = {}
+            class_obj["class_id"]  = str(c.id)
+            class_obj["class_name"] = str(c.course.name)
+            class_obj["class_num"] = str(c.course.course_num)
+            class_obj["professor_rating"] = int(c.professor.rating())
 
-        for pair in class_name_pairs:
-            if search_term.lower() in pair['name'].lower():
-                matching_class_ids.append(pair['id'])
+            #XXX: Calculate cost of each textbook correctly
+            class_obj["osu_textbook_total"] = 100
+            class_models.append(class_obj)
 
         resp = {
-                "classes":matching_class_ids,
+                "classes":class_models,
                 "majors":major_models,
         }
 
